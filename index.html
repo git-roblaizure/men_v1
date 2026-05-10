@@ -48,7 +48,7 @@
     background: linear-gradient(90deg, var(--gold), transparent 70%);
   }
   .eyebrow {
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #AAAAAA;
@@ -58,7 +58,7 @@
   }
   header h1 {
     font-family: 'Playfair Display', serif;
-    font-size: 30px;
+    font-size: 34px;
     font-weight: 900;
     color: white;
     line-height: 1.1;
@@ -67,7 +67,7 @@
     z-index: 1;
   }
   .header-sub {
-    font-size: 13px;
+    font-size: 15px;
     color: #AAAAAA;
     font-style: italic;
     line-height: 1.65;
@@ -87,86 +87,81 @@
     padding: 32px 20px;
   }
   .section-eyebrow {
-    font-size: 10px;
-    letter-spacing: 0.22em;
+    font-size: 11px;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     font-weight: 600;
     text-align: center;
-    margin-bottom: 6px;
+    color: var(--gray-mid);
+    margin-bottom: 8px;
   }
-  .universal-section .section-eyebrow { color: var(--gray-mid); }
   .section-headline {
     font-family: 'Playfair Display', serif;
     font-weight: 900;
     text-align: center;
     line-height: 1.15;
-    margin-bottom: 6px;
-  }
-  .universal-section .section-headline {
-    font-size: clamp(20px, 3vw, 26px);
+    font-size: 28px;
     color: var(--body);
+    margin-bottom: 8px;
   }
   .section-subhead {
-    font-size: 12.5px;
+    font-size: 15px;
     text-align: center;
     font-style: italic;
     line-height: 1.6;
+    color: var(--gray-mid);
     margin-bottom: 24px;
   }
-  .universal-section .section-subhead { color: var(--gray-mid); }
-  .universal-items {
-    display: flex;
-    flex-direction: column;
-  }
+  .universal-items { display: flex; flex-direction: column; }
   .universal-item {
     display: flex;
     align-items: flex-start;
-    gap: 14px;
-    padding: 16px 0;
+    gap: 16px;
+    padding: 18px 0;
     border-bottom: 1px solid var(--divider);
   }
   .universal-item:last-child { border-bottom: none; }
   .universal-num {
     font-family: 'Playfair Display', serif;
-    font-size: 26px;
+    font-size: 32px;
     font-weight: 900;
     color: var(--divider);
     line-height: 1;
     flex-shrink: 0;
+    width: 36px;
     padding-top: 2px;
-    width: 32px;
   }
   .universal-text strong {
     display: block;
-    font-size: 10px;
+    font-size: 13px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--gray-mid);
     font-weight: 600;
-    margin-bottom: 3px;
+    margin-bottom: 4px;
   }
   .universal-text span {
-    font-size: 13px;
+    font-size: 15px;
     color: var(--gray-dark);
-    line-height: 1.5;
+    line-height: 1.55;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
   .universal-verse-ref {
-    font-size: 9.5px;
+    font-size: 11px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--gold);
     font-weight: 600;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
   }
   .universal-verse-text {
-    font-size: 12px;
+    font-size: 14px;
     color: var(--gray-mid);
     font-style: italic;
     line-height: 1.6;
     border-left: 2px solid var(--divider);
-    padding-left: 10px;
+    padding-left: 12px;
   }
 
   /* ── BRIDGE ── */
@@ -180,18 +175,13 @@
     justify-content: center;
     gap: 12px;
   }
-  .bridge-line {
-    flex: 1;
-    height: 1px;
-    background: var(--divider);
-    max-width: 60px;
-  }
+  .bridge-line { flex: 1; height: 1px; background: var(--divider); }
   .bridge-text {
-    font-size: 12px;
+    font-size: 14px;
     color: var(--gray-mid);
     font-style: italic;
-    line-height: 1.55;
-    max-width: 260px;
+    line-height: 1.5;
+    max-width: 240px;
   }
   .bridge-text em {
     color: var(--gold);
@@ -221,10 +211,7 @@
     background: linear-gradient(90deg, var(--gold), transparent 70%);
   }
   .called-section .section-eyebrow { color: #AAAAAA; }
-  .called-section .section-headline {
-    font-size: clamp(22px, 3.5vw, 30px);
-    color: white;
-  }
+  .called-section .section-headline { color: white; }
   .called-section .section-subhead { color: #AAAAAA; }
   .called-cards {
     display: flex;
@@ -239,13 +226,13 @@
     border-top: 3px solid var(--gold);
     padding: 20px;
     display: grid;
-    grid-template-columns: 44px 1fr;
+    grid-template-columns: 48px 1fr;
     gap: 0 14px;
     align-items: start;
   }
   .card-number {
     font-family: 'Playfair Display', serif;
-    font-size: 30px;
+    font-size: 34px;
     font-weight: 900;
     color: rgba(255,255,255,0.15);
     line-height: 1;
@@ -253,27 +240,27 @@
   }
   .card-title {
     font-family: 'Playfair Display', serif;
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
     color: white;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
   .card-desc {
-    font-size: 13px;
+    font-size: 15px;
     color: #CCCCCC;
     line-height: 1.65;
     margin-bottom: 14px;
   }
   .card-verse-ref {
-    font-size: 9.5px;
+    font-size: 11px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--gold);
     font-weight: 600;
-    margin-bottom: 4px;
+    margin-bottom: 5px;
   }
   .card-verse-text {
-    font-size: 12px;
+    font-size: 14px;
     color: #AAAAAA;
     font-style: italic;
     line-height: 1.6;
@@ -281,12 +268,10 @@
     padding-left: 10px;
   }
 
-  /* ── TABLE SECTION ── */
-  .table-section {
-    padding: 28px 20px 48px;
-  }
+  /* ── 27 WEEK LIST ── */
+  .table-section { padding: 28px 20px 48px; }
   .section-label {
-    font-size: 10px;
+    font-size: 11px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--gray-mid);
@@ -295,55 +280,50 @@
     padding-bottom: 10px;
     margin-bottom: 0;
   }
-  .study-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  .study-table thead th {
-    text-align: left;
-    font-size: 9px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--gray-mid);
-    font-weight: 600;
-    padding: 12px 10px 10px;
+  .week-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px 0;
     border-bottom: 1px solid var(--divider);
-    background: var(--cream);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-  }
-  .study-table thead th:first-child { padding-left: 0; width: 36px; }
-  .study-table tbody tr {
-    border-bottom: 1px solid var(--divider);
+    text-decoration: none;
+    color: inherit;
     transition: background 0.15s;
   }
-  .study-table tbody tr:last-child { border-bottom: none; }
-  .study-table tbody tr:active { background: rgba(201,168,76,0.08); }
-  .study-table td {
-    padding: 13px 10px;
-    vertical-align: top;
-    line-height: 1.45;
-  }
-  .study-table td:first-child {
-    padding-left: 0;
+  .week-row:last-child { border-bottom: none; }
+  .week-row:active { background: rgba(201,168,76,0.08); }
+  .week-num {
     font-family: 'Playfair Display', serif;
-    font-size: 15px;
+    font-size: 20px;
     font-weight: 900;
     color: var(--divider);
-    padding-top: 16px;
-    white-space: nowrap;
+    flex-shrink: 0;
+    width: 28px;
+    padding-top: 3px;
+    text-align: right;
   }
+  .week-content { flex: 1; }
   .book-name {
     font-family: 'Playfair Display', serif;
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 700;
     color: var(--body);
     display: block;
-    margin-bottom: 2px;
+    margin-bottom: 3px;
   }
-  .book-theme { font-size: 12px; color: var(--gray-dark); font-style: italic; }
-  .col-hide-mobile { display: none; }
+  .book-theme {
+    font-size: 15px;
+    color: var(--gray-dark);
+    font-style: italic;
+    line-height: 1.4;
+    display: block;
+  }
+  .week-arrow {
+    color: var(--divider);
+    font-size: 18px;
+    padding-top: 4px;
+    flex-shrink: 0;
+  }
 
   /* ── FOOTER ── */
   footer {
@@ -359,8 +339,7 @@
   /* ── DESKTOP ── */
   @media (min-width: 700px) {
     header { padding: 52px 48px 48px; }
-    header h1 { font-size: clamp(30px, 5vw, 50px); }
-    .header-sub { font-size: 14px; max-width: 540px; }
+    header h1 { font-size: clamp(34px, 5vw, 50px); }
     .universal-section { padding: 40px 48px; }
     .universal-items { flex-direction: row; }
     .universal-item {
@@ -376,15 +355,11 @@
     .called-section { padding: 40px 48px; }
     .called-cards { flex-direction: row; gap: 16px; }
     .called-card { display: block; flex: 1; }
-    .card-number { margin-bottom: 10px; font-size: 34px; }
-    .table-section { padding: 44px 48px 64px; }
-    .study-table thead th { font-size: 9.5px; padding: 14px 16px 12px; }
-    .study-table thead th:first-child { width: 46px; }
-    .study-table td { padding: 15px 16px; }
-    .study-table td:first-child { font-size: 17px; padding-top: 18px; }
-    .book-name { font-size: 15px; }
-    .book-theme { font-size: 13px; }
-    .col-hide-mobile { display: table-cell; }
+    .card-number { margin-bottom: 10px; }
+    .table-section { padding: 44px 48px 64px; max-width: 780px; margin: 0 auto; }
+    .week-row:hover { background: rgba(201,168,76,0.06); }
+    .book-name { font-size: 18px; }
+    .book-theme { font-size: 14px; }
   }
 </style>
 </head>
@@ -476,49 +451,38 @@
   </div>
 </div>
 
-<!-- TABLE -->
+<!-- 27 WEEK LIST -->
 <div class="table-section">
   <div class="section-label">27 Weeks &nbsp;·&nbsp; New Testament</div>
-  <table class="study-table">
-    <thead>
-      <tr>
-        <th>Wk</th>
-        <th>Book</th>
-        <th>Book Theme</th>
-        <th class="col-hide-mobile">Key Verse</th>
-        <th class="col-hide-mobile">Men's Topic</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>1</td><td><span class="book-name">Matthew</span></td><td><span class="book-theme">Jesus is King</span></td><td class="col-hide-mobile"><span class="book-theme">Matthew 28:18</span></td><td class="col-hide-mobile"><span class="book-theme">Know the Character and Nature of God</span></td></tr>
-      <tr><td>2</td><td><span class="book-name">Mark</span></td><td><span class="book-theme">Jesus is Servant</span></td><td class="col-hide-mobile"><span class="book-theme">Mark 10:45</span></td><td class="col-hide-mobile"><span class="book-theme">Lead with Dependence on the Lord, Not Dominance</span></td></tr>
-      <tr><td>3</td><td><span class="book-name">Luke</span></td><td><span class="book-theme">Christ as Man</span></td><td class="col-hide-mobile"><span class="book-theme">Luke 19:10</span></td><td class="col-hide-mobile"><span class="book-theme">Be Filled with God's Spirit</span></td></tr>
-      <tr><td>4</td><td><span class="book-name">John</span></td><td><span class="book-theme">Christ is the Son of God</span></td><td class="col-hide-mobile"><span class="book-theme">John 20:31</span></td><td class="col-hide-mobile"><span class="book-theme">Love Like Christ</span></td></tr>
-      <tr><td>5</td><td><span class="book-name">Acts</span></td><td><span class="book-theme">Birth and Growth of the Church</span></td><td class="col-hide-mobile"><span class="book-theme">Acts 1:8</span></td><td class="col-hide-mobile"><span class="book-theme">Be a Man of Prayer</span></td></tr>
-      <tr><td>6</td><td><span class="book-name">Romans</span></td><td><span class="book-theme">The Righteousness of God in Salvation</span></td><td class="col-hide-mobile"><span class="book-theme">Romans 1:16–17</span></td><td class="col-hide-mobile"><span class="book-theme">Trust in God's Sovereignty</span></td></tr>
-      <tr><td>7</td><td><span class="book-name">1 Corinthians</span></td><td><span class="book-theme">Correction</span></td><td class="col-hide-mobile"><span class="book-theme">1 Corinthians 1:10</span></td><td class="col-hide-mobile"><span class="book-theme">Pursue Sexual Purity and Self-Mastery</span></td></tr>
-      <tr><td>8</td><td><span class="book-name">2 Corinthians</span></td><td><span class="book-theme">Defense of Apostleship</span></td><td class="col-hide-mobile"><span class="book-theme">2 Corinthians 12:9</span></td><td class="col-hide-mobile"><span class="book-theme">Battle Pride and Fear</span></td></tr>
-      <tr><td>9</td><td><span class="book-name">Galatians</span></td><td><span class="book-theme">Freedom</span></td><td class="col-hide-mobile"><span class="book-theme">Galatians 5:1</span></td><td class="col-hide-mobile"><span class="book-theme">Be Sober-Minded and Self-Controlled</span></td></tr>
-      <tr><td>10</td><td><span class="book-name">Ephesians</span></td><td><span class="book-theme">Practice Your Position</span></td><td class="col-hide-mobile"><span class="book-theme">Ephesians 4:1</span></td><td class="col-hide-mobile"><span class="book-theme">Love Your Wife Like Christ Loved the Church</span></td></tr>
-      <tr><td>11</td><td><span class="book-name">Philippians</span></td><td><span class="book-theme">Unity in Christ</span></td><td class="col-hide-mobile"><span class="book-theme">Philippians 2:2</span></td><td class="col-hide-mobile"><span class="book-theme">Walk in Humility</span></td></tr>
-      <tr><td>12</td><td><span class="book-name">Colossians</span></td><td><span class="book-theme">Sufficient</span></td><td class="col-hide-mobile"><span class="book-theme">Colossians 2:9–10</span></td><td class="col-hide-mobile"><span class="book-theme">Be Diligent in God's Word</span></td></tr>
-      <tr><td>13</td><td><span class="book-name">1 Thessalonians</span></td><td><span class="book-theme">The Growth of a Baby Church</span></td><td class="col-hide-mobile"><span class="book-theme">1 Thessalonians 1:3</span></td><td class="col-hide-mobile"><span class="book-theme">Step Up First — Men Answer the Call</span></td></tr>
-      <tr><td>14</td><td><span class="book-name">2 Thessalonians</span></td><td><span class="book-theme">Work While You Wait</span></td><td class="col-hide-mobile"><span class="book-theme">2 Thessalonians 3:13</span></td><td class="col-hide-mobile"><span class="book-theme">Created to Work and to Rest in the Lord</span></td></tr>
-      <tr><td>15</td><td><span class="book-name">1 Timothy</span></td><td><span class="book-theme">Leadership</span></td><td class="col-hide-mobile"><span class="book-theme">1 Timothy 3:1</span></td><td class="col-hide-mobile"><span class="book-theme">Called to Provide and Protect</span></td></tr>
-      <tr><td>16</td><td><span class="book-name">2 Timothy</span></td><td><span class="book-theme">Combat</span></td><td class="col-hide-mobile"><span class="book-theme">2 Timothy 4:7</span></td><td class="col-hide-mobile"><span class="book-theme">Stand Firm in the Faith</span></td></tr>
-      <tr><td>17</td><td><span class="book-name">Titus</span></td><td><span class="book-theme">Conduct</span></td><td class="col-hide-mobile"><span class="book-theme">Titus 2:11–12</span></td><td class="col-hide-mobile"><span class="book-theme">Know When to Be Gentle and When to Be Fierce</span></td></tr>
-      <tr><td>18</td><td><span class="book-name">Philemon</span></td><td><span class="book-theme">Bondage to Brotherhood</span></td><td class="col-hide-mobile"><span class="book-theme">Philemon 16</span></td><td class="col-hide-mobile"><span class="book-theme">Forgive as You Have Been Forgiven</span></td></tr>
-      <tr><td>19</td><td><span class="book-name">Hebrews</span></td><td><span class="book-theme">Superiority of Christ</span></td><td class="col-hide-mobile"><span class="book-theme">Hebrews 1:3</span></td><td class="col-hide-mobile"><span class="book-theme">Endure Suffering with Faith</span></td></tr>
-      <tr><td>20</td><td><span class="book-name">James</span></td><td><span class="book-theme">Faith that Works</span></td><td class="col-hide-mobile"><span class="book-theme">James 2:17</span></td><td class="col-hide-mobile"><span class="book-theme">Obey God's Commands — Get Out of the Boat</span></td></tr>
-      <tr><td>21</td><td><span class="book-name">1 Peter</span></td><td><span class="book-theme">Standing Firm</span></td><td class="col-hide-mobile"><span class="book-theme">1 Peter 5:10</span></td><td class="col-hide-mobile"><span class="book-theme">Fear the Lord</span></td></tr>
-      <tr><td>22</td><td><span class="book-name">2 Peter</span></td><td><span class="book-theme">Character and Counterfeit Christianity</span></td><td class="col-hide-mobile"><span class="book-theme">2 Peter 1:5–6</span></td><td class="col-hide-mobile"><span class="book-theme">Be a Worthy Example to Follow</span></td></tr>
-      <tr><td>23</td><td><span class="book-name">1 John</span></td><td><span class="book-theme">The Tests of Eternal Life</span></td><td class="col-hide-mobile"><span class="book-theme">1 John 5:13</span></td><td class="col-hide-mobile"><span class="book-theme">Repent and Confess Sin Quickly</span></td></tr>
-      <tr><td>24</td><td><span class="book-name">2 John</span></td><td><span class="book-theme">Tough Truth</span></td><td class="col-hide-mobile"><span class="book-theme">2 John 6</span></td><td class="col-hide-mobile"><span class="book-theme">Raise Your Children Without Exasperating Them</span></td></tr>
-      <tr><td>25</td><td><span class="book-name">3 John</span></td><td><span class="book-theme">Loyalty to the Truth</span></td><td class="col-hide-mobile"><span class="book-theme">3 John 4</span></td><td class="col-hide-mobile"><span class="book-theme">Sharpen Other Men</span></td></tr>
-      <tr><td>26</td><td><span class="book-name">Jude</span></td><td><span class="book-theme">Beware of False Teachers</span></td><td class="col-hide-mobile"><span class="book-theme">Jude 3</span></td><td class="col-hide-mobile"><span class="book-theme">Seek Vindication from the Lord, Not Revenge</span></td></tr>
-      <tr><td>27</td><td><span class="book-name">Revelation</span></td><td><span class="book-theme">The End — The Revelation of Jesus Christ</span></td><td class="col-hide-mobile"><span class="book-theme">Revelation 1:7</span></td><td class="col-hide-mobile"><span class="book-theme">Live with Eternity in View</span></td></tr>
-    </tbody>
-  </table>
+
+  <a class="week-row" href="week01.html"><div class="week-num">1</div><div class="week-content"><span class="book-name">Matthew</span><span class="book-theme">Jesus is King</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week02.html"><div class="week-num">2</div><div class="week-content"><span class="book-name">Mark</span><span class="book-theme">Jesus is Servant</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week03.html"><div class="week-num">3</div><div class="week-content"><span class="book-name">Luke</span><span class="book-theme">Christ as Man</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week04.html"><div class="week-num">4</div><div class="week-content"><span class="book-name">John</span><span class="book-theme">Christ is the Son of God</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week05.html"><div class="week-num">5</div><div class="week-content"><span class="book-name">Acts</span><span class="book-theme">Birth and Growth of the Church</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week06.html"><div class="week-num">6</div><div class="week-content"><span class="book-name">Romans</span><span class="book-theme">The Righteousness of God in Salvation</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week07.html"><div class="week-num">7</div><div class="week-content"><span class="book-name">1 Corinthians</span><span class="book-theme">Correction</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week08.html"><div class="week-num">8</div><div class="week-content"><span class="book-name">2 Corinthians</span><span class="book-theme">Defense of Apostleship</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week09.html"><div class="week-num">9</div><div class="week-content"><span class="book-name">Galatians</span><span class="book-theme">Freedom</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week10.html"><div class="week-num">10</div><div class="week-content"><span class="book-name">Ephesians</span><span class="book-theme">Practice Your Position</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week11.html"><div class="week-num">11</div><div class="week-content"><span class="book-name">Philippians</span><span class="book-theme">Unity in Christ</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week12.html"><div class="week-num">12</div><div class="week-content"><span class="book-name">Colossians</span><span class="book-theme">Sufficient</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week13.html"><div class="week-num">13</div><div class="week-content"><span class="book-name">1 Thessalonians</span><span class="book-theme">The Growth of a Baby Church</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week14.html"><div class="week-num">14</div><div class="week-content"><span class="book-name">2 Thessalonians</span><span class="book-theme">Work While You Wait</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week15.html"><div class="week-num">15</div><div class="week-content"><span class="book-name">1 Timothy</span><span class="book-theme">Leadership</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week16.html"><div class="week-num">16</div><div class="week-content"><span class="book-name">2 Timothy</span><span class="book-theme">Combat</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week17.html"><div class="week-num">17</div><div class="week-content"><span class="book-name">Titus</span><span class="book-theme">Conduct</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week18.html"><div class="week-num">18</div><div class="week-content"><span class="book-name">Philemon</span><span class="book-theme">Bondage to Brotherhood</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week19.html"><div class="week-num">19</div><div class="week-content"><span class="book-name">Hebrews</span><span class="book-theme">Superiority of Christ</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week20.html"><div class="week-num">20</div><div class="week-content"><span class="book-name">James</span><span class="book-theme">Faith that Works</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week21.html"><div class="week-num">21</div><div class="week-content"><span class="book-name">1 Peter</span><span class="book-theme">Standing Firm</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week22.html"><div class="week-num">22</div><div class="week-content"><span class="book-name">2 Peter</span><span class="book-theme">Character and Counterfeit Christianity</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week23.html"><div class="week-num">23</div><div class="week-content"><span class="book-name">1 John</span><span class="book-theme">The Tests of Eternal Life</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week24.html"><div class="week-num">24</div><div class="week-content"><span class="book-name">2 John</span><span class="book-theme">Tough Truth</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week25.html"><div class="week-num">25</div><div class="week-content"><span class="book-name">3 John</span><span class="book-theme">Loyalty to the Truth</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week26.html"><div class="week-num">26</div><div class="week-content"><span class="book-name">Jude</span><span class="book-theme">Beware of False Teachers</span></div><div class="week-arrow">›</div></a>
+  <a class="week-row" href="week27.html"><div class="week-num">27</div><div class="week-content"><span class="book-name">Revelation</span><span class="book-theme">The End — The Revelation of Jesus Christ</span></div><div class="week-arrow">›</div></a>
+
 </div>
 
 <footer>
