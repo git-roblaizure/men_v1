@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Men in God's Word — 27-Week New Testament Study</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark:       #2B2B2B;
+    --gold:       #C9A84C;
+    --cream:      #F9F6F0;
+    --white:      #FFFFFF;
+    --gray-light: #F0EDEA;
+    --gray-mid:   #888888;
+    --gray-dark:  #555555;
+    --body:       #1A1A1A;
+    --divider:    #D9D4CC;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--cream);
+    color: var(--body);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+  header {
+    background: var(--dark);
+    color: white;
+    padding: 52px 48px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(-45deg, transparent, transparent 60px, rgba(255,255,255,0.012) 60px, rgba(255,255,255,0.012) 61px);
+    pointer-events: none;
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), transparent 70%);
+  }
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #AAAAAA;
+    margin-bottom: 14px;
+    font-weight: 400;
+  }
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 5vw, 50px);
+    font-weight: 900;
+    color: white;
+    line-height: 1.08;
+    margin-bottom: 16px;
+  }
+  .header-sub {
+    font-size: 14px;
+    color: #AAAAAA;
+    font-style: italic;
+    max-width: 540px;
+    line-height: 1.65;
+  }
+  .header-sub em {
+    color: var(--gold);
+    font-style: normal;
+    font-weight: 600;
+  }
+  .mission-strip {
+    background: var(--white);
+    border-bottom: 1px solid var(--divider);
+    display: flex;
+  }
+  .mission-item {
+    flex: 1;
+    padding: 20px 28px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    border-right: 1px solid var(--divider);
+  }
+  .mission-item:last-child { border-right: none; }
+  .mission-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: var(--divider);
+    line-height: 1;
+    flex-shrink: 0;
+    padding-top: 2px;
+  }
+  .mission-text strong {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 4px;
+    font-family: 'Source Serif 4', serif;
+  }
+  .mission-text span {
+    font-size: 12.5px;
+    color: var(--gray-dark);
+    line-height: 1.5;
+  }
+  .container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 44px 28px 64px;
+  }
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gray-mid);
+    font-weight: 600;
+    border-bottom: 1px solid var(--divider);
+    padding-bottom: 10px;
+    margin-bottom: 0;
+  }
+  .study-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .study-table thead th {
+    text-align: left;
+    font-size: 9.5px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gray-mid);
+    font-weight: 600;
+    font-family: 'Source Serif 4', serif;
+    padding: 14px 16px 12px;
+    border-bottom: 1px solid var(--divider);
+    background: var(--cream);
+  }
+  .study-table thead th:first-child { padding-left: 0; width: 46px; }
+  .study-table thead th:nth-child(2) { width: 140px; }
+  .study-table thead th:nth-child(3) { width: 210px; }
+  .study-table thead th:nth-child(4) { width: 150px; }
+  .study-table tbody tr {
+    border-bottom: 1px solid var(--divider);
+    transition: background 0.15s;
+  }
+  .study-table tbody tr:hover { background: rgba(201,168,76,0.06); }
+  .study-table tbody tr:last-child { border-bottom: none; }
+  .study-table td {
+    padding: 15px 16px;
+    vertical-align: top;
+    font-size: 13.5px;
+    line-height: 1.55;
+  }
+  .study-table td:first-child {
+    padding-left: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 900;
+    color: var(--divider);
+    padding-top: 18px;
+    white-space: nowrap;
+  }
+  .book-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--body);
+    display: block;
+  }
+  .book-theme  { font-size: 13px; color: var(--gray-dark); font-style: italic; }
+  .key-ref     { font-size: 12.5px; color: var(--gray-dark); font-style: italic; }
+  .topic-cell  { font-size: 13px; color: var(--gray-dark); line-height: 1.5; }
+  footer {
+    border-top: 1px solid var(--divider);
+    text-align: center;
+    padding: 24px;
+    font-size: 11px;
+    color: var(--gray-mid);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  @media (max-width: 680px) {
+    header { padding: 36px 20px 36px; }
+    .mission-strip { flex-direction: column; }
+    .mission-item { border-right: none; border-bottom: 1px solid var(--divider); padding: 16px 20px; }
+    .mission-item:last-child { border-bottom: none; }
+    .container { padding: 28px 16px 48px; }
+    .study-table thead th:nth-child(3),
+    .study-table thead th:nth-child(4),
+    .study-table td:nth-child(3),
+    .study-table td:nth-child(4) { display: none; }
+    .study-table td { padding: 13px 8px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow">Men in God's Word &nbsp;·&nbsp; 27-Week New Testament Study</div>
+  <h1>Book Themes, Key Verses<br>&amp; Men's Topics</h1>
+  <p class="header-sub">A year through the New Testament — studying Scripture through the lens of what it means to <em>love God</em>, <em>love people</em>, and <em>make disciples</em> as men.</p>
+</header>
+
+<div class="mission-strip">
+  <div class="mission-item">
+    <div class="mission-num">1</div>
+    <div class="mission-text">
+      <strong>Love God</strong>
+      <span>Pursue God wholeheartedly in devotion, character &amp; daily walk</span>
+    </div>
+  </div>
+  <div class="mission-item">
+    <div class="mission-num">2</div>
+    <div class="mission-text">
+      <strong>Love People</strong>
+      <span>Lead your home and relationships with sacrifice &amp; Christlikeness</span>
+    </div>
+  </div>
+  <div class="mission-item">
+    <div class="mission-num">3</div>
+    <div class="mission-text">
+      <strong>Make Disciples</strong>
+      <span>Every man is called to invest in other men — Matthew 28:18–20</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="section-label">27 Weeks &nbsp;·&nbsp; New Testament</div>
+  <table class="study-table">
+    <thead>
+      <tr>
+        <th>Wk</th>
+        <th>Book</th>
+        <th>Book Theme</th>
+        <th>Key Verse</th>
+        <th>Men's Topic</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td><span class="book-name">Matthew</span></td><td><span class="book-theme">Jesus is King</span></td><td><span class="key-ref">Matthew 28:18</span></td><td><span class="topic-cell">Know the Character and Nature of God</span></td></tr>
+      <tr><td>2</td><td><span class="book-name">Mark</span></td><td><span class="book-theme">Jesus is Servant</span></td><td><span class="key-ref">Mark 10:45</span></td><td><span class="topic-cell">Lead with Dependence on the Lord, Not Dominance</span></td></tr>
+      <tr><td>3</td><td><span class="book-name">Luke</span></td><td><span class="book-theme">Christ as Man</span></td><td><span class="key-ref">Luke 19:10</span></td><td><span class="topic-cell">Be Filled with God's Spirit</span></td></tr>
+      <tr><td>4</td><td><span class="book-name">John</span></td><td><span class="book-theme">Christ is the Son of God</span></td><td><span class="key-ref">John 20:31</span></td><td><span class="topic-cell">Love Like Christ</span></td></tr>
+      <tr><td>5</td><td><span class="book-name">Acts</span></td><td><span class="book-theme">Birth and Growth of the Church</span></td><td><span class="key-ref">Acts 1:8</span></td><td><span class="topic-cell">Be a Man of Prayer</span></td></tr>
+      <tr><td>6</td><td><span class="book-name">Romans</span></td><td><span class="book-theme">The Righteousness of God in Salvation</span></td><td><span class="key-ref">Romans 1:16–17</span></td><td><span class="topic-cell">Trust in God's Sovereignty</span></td></tr>
+      <tr><td>7</td><td><span class="book-name">1 Corinthians</span></td><td><span class="book-theme">Correction</span></td><td><span class="key-ref">1 Corinthians 1:10</span></td><td><span class="topic-cell">Pursue Sexual Purity and Self-Mastery</span></td></tr>
+      <tr><td>8</td><td><span class="book-name">2 Corinthians</span></td><td><span class="book-theme">Defense of Apostleship</span></td><td><span class="key-ref">2 Corinthians 12:9</span></td><td><span class="topic-cell">Battle Pride and Fear</span></td></tr>
+      <tr><td>9</td><td><span class="book-name">Galatians</span></td><td><span class="book-theme">Freedom</span></td><td><span class="key-ref">Galatians 5:1</span></td><td><span class="topic-cell">Be Sober-Minded and Self-Controlled</span></td></tr>
+      <tr><td>10</td><td><span class="book-name">Ephesians</span></td><td><span class="book-theme">Practice Your Position</span></td><td><span class="key-ref">Ephesians 4:1</span></td><td><span class="topic-cell">Love Your Wife Like Christ Loved the Church</span></td></tr>
+      <tr><td>11</td><td><span class="book-name">Philippians</span></td><td><span class="book-theme">Unity in Christ</span></td><td><span class="key-ref">Philippians 2:2</span></td><td><span class="topic-cell">Walk in Humility</span></td></tr>
+      <tr><td>12</td><td><span class="book-name">Colossians</span></td><td><span class="book-theme">Sufficient</span></td><td><span class="key-ref">Colossians 2:9–10</span></td><td><span class="topic-cell">Be Diligent in God's Word</span></td></tr>
+      <tr><td>13</td><td><span class="book-name">1 Thessalonians</span></td><td><span class="book-theme">The Growth of a Baby Church</span></td><td><span class="key-ref">1 Thessalonians 1:3</span></td><td><span class="topic-cell">Step Up First — Men Answer the Call</span></td></tr>
+      <tr><td>14</td><td><span class="book-name">2 Thessalonians</span></td><td><span class="book-theme">Work While You Wait</span></td><td><span class="key-ref">2 Thessalonians 3:13</span></td><td><span class="topic-cell">Created to Work and to Rest in the Lord</span></td></tr>
+      <tr><td>15</td><td><span class="book-name">1 Timothy</span></td><td><span class="book-theme">Leadership</span></td><td><span class="key-ref">1 Timothy 3:1</span></td><td><span class="topic-cell">Called to Provide and Protect</span></td></tr>
+      <tr><td>16</td><td><span class="book-name">2 Timothy</span></td><td><span class="book-theme">Combat</span></td><td><span class="key-ref">2 Timothy 4:7</span></td><td><span class="topic-cell">Stand Firm in the Faith</span></td></tr>
+      <tr><td>17</td><td><span class="book-name">Titus</span></td><td><span class="book-theme">Conduct</span></td><td><span class="key-ref">Titus 2:11–12</span></td><td><span class="topic-cell">Know When to Be Gentle and When to Be Fierce</span></td></tr>
+      <tr><td>18</td><td><span class="book-name">Philemon</span></td><td><span class="book-theme">Bondage to Brotherhood</span></td><td><span class="key-ref">Philemon 16</span></td><td><span class="topic-cell">Forgive as You Have Been Forgiven</span></td></tr>
+      <tr><td>19</td><td><span class="book-name">Hebrews</span></td><td><span class="book-theme">Superiority of Christ</span></td><td><span class="key-ref">Hebrews 1:3</span></td><td><span class="topic-cell">Endure Suffering with Faith</span></td></tr>
+      <tr><td>20</td><td><span class="book-name">James</span></td><td><span class="book-theme">Faith that Works</span></td><td><span class="key-ref">James 2:17</span></td><td><span class="topic-cell">Obey God's Commands — Get Out of the Boat</span></td></tr>
+      <tr><td>21</td><td><span class="book-name">1 Peter</span></td><td><span class="book-theme">Standing Firm</span></td><td><span class="key-ref">1 Peter 5:10</span></td><td><span class="topic-cell">Fear the Lord</span></td></tr>
+      <tr><td>22</td><td><span class="book-name">2 Peter</span></td><td><span class="book-theme">Character and Counterfeit Christianity</span></td><td><span class="key-ref">2 Peter 1:5–6</span></td><td><span class="topic-cell">Be a Worthy Example to Follow</span></td></tr>
+      <tr><td>23</td><td><span class="book-name">1 John</span></td><td><span class="book-theme">The Tests of Eternal Life</span></td><td><span class="key-ref">1 John 5:13</span></td><td><span class="topic-cell">Repent and Confess Sin Quickly</span></td></tr>
+      <tr><td>24</td><td><span class="book-name">2 John</span></td><td><span class="book-theme">Tough Truth</span></td><td><span class="key-ref">2 John 6</span></td><td><span class="topic-cell">Raise Your Children Without Exasperating Them</span></td></tr>
+      <tr><td>25</td><td><span class="book-name">3 John</span></td><td><span class="book-theme">Loyalty to the Truth</span></td><td><span class="key-ref">3 John 4</span></td><td><span class="topic-cell">Sharpen Other Men</span></td></tr>
+      <tr><td>26</td><td><span class="book-name">Jude</span></td><td><span class="book-theme">Beware of False Teachers</span></td><td><span class="key-ref">Jude 3</span></td><td><span class="topic-cell">Seek Vindication from the Lord, Not Revenge</span></td></tr>
+      <tr><td>27</td><td><span class="book-name">Revelation</span></td><td><span class="book-theme">The End — The Revelation of Jesus Christ</span></td><td><span class="key-ref">Revelation 1:7</span></td><td><span class="topic-cell">Live with Eternity in View</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<footer>
+  Men in God's Word &nbsp;·&nbsp; 27-Week New Testament Study &nbsp;·&nbsp; ESV
+</footer>
+
+</body>
+</html>
