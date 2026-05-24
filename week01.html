@@ -87,128 +87,116 @@
     position: relative;
     z-index: 1;
   }
-  .key-verse-block {
-    border-left: 3px solid var(--gold);
-    padding-left: 14px;
+  .header-intro {
+    font-size: 15px;
+    color: #AAAAAA;
+    line-height: 1.65;
     position: relative;
     z-index: 1;
-  }
-  .key-verse-ref {
-    font-size: 11px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--gold);
-    font-weight: 600;
-    margin-bottom: 5px;
-  }
-  .key-verse-text {
-    font-size: 16px;
-    color: #CCCCCC;
-    font-style: italic;
-    line-height: 1.6;
+    max-width: 600px;
   }
 
-  /* ── MEN'S TOPIC BOX ── */
-  .topic-box {
+  /* ── THEME NAV ── */
+  .theme-nav {
     background: var(--white);
-    border-left: 4px solid var(--dark);
-    margin: 24px 20px;
-    padding: 22px 20px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    border-bottom: 1px solid var(--divider);
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
-  .topic-label {
-    font-size: 11px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--gray-mid);
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
-  .topic-name {
-    font-family: 'Playfair Display', serif;
-    font-size: 22px;
-    font-weight: 700;
-    color: var(--body);
-    margin-bottom: 16px;
-    line-height: 1.3;
-  }
-  .topic-quote {
-    font-size: 16px;
-    color: var(--gray-dark);
-    font-style: italic;
-    line-height: 1.65;
-    border-left: 2px solid var(--divider);
-    padding-left: 14px;
-    margin-bottom: 8px;
-  }
-  .topic-author {
-    font-size: 13px;
-    color: var(--gray-mid);
-    padding-left: 14px;
-  }
-
-  /* ── SECTION LABEL ── */
-  .section-label {
-    font-size: 11px;
+  .theme-nav-label {
+    font-size: 10px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--gray-mid);
     font-weight: 600;
-    border-bottom: 1px solid var(--divider);
-    padding: 0 20px 10px;
-    margin-bottom: 0;
+    margin-bottom: 4px;
   }
+  .theme-nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .theme-nav-link {
+    font-size: 13px;
+    color: var(--dark);
+    text-decoration: none;
+    background: var(--cream);
+    border: 1px solid var(--divider);
+    border-left: 3px solid var(--gold);
+    padding: 6px 12px;
+    line-height: 1.3;
+    transition: background 0.15s;
+  }
+  .theme-nav-link:hover { background: rgba(201,168,76,0.1); }
 
-  /* ── PASSAGES ── */
-  .passages { padding: 0 20px; }
-  .passage {
-    padding: 20px 0;
-    border-bottom: 1px solid var(--divider);
+  /* ── THEME SECTION ── */
+  .theme-section {
+    padding: 32px 20px 0;
   }
-  .passage:last-child { border-bottom: none; }
-  .passage-ref {
-    font-family: 'Playfair Display', serif;
-    font-size: 19px;
-    font-weight: 700;
-    color: var(--body);
-    margin-bottom: 10px;
+  .theme-header {
+    margin-bottom: 24px;
   }
-  .passage-text {
-    font-size: 16px;
-    color: var(--gray-dark);
-    line-height: 1.8;
-  }
-
-  /* ── DISCUSSION QUESTIONS ── */
-  .questions { padding: 0 20px 20px; }
-  .question-item {
-    padding: 20px 0;
-    border-bottom: 1px solid var(--divider);
-    display: grid;
-    grid-template-columns: 40px 1fr;
-    gap: 0 14px;
-  }
-  .question-item:last-child { border-bottom: none; }
-  .q-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 30px;
-    font-weight: 900;
-    color: var(--divider);
-    line-height: 1;
-    padding-top: 3px;
-  }
-  .q-label {
-    font-size: 11px;
-    letter-spacing: 0.16em;
+  .theme-number {
+    font-size: 10px;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--gold);
     font-weight: 600;
     margin-bottom: 6px;
   }
-  .q-text {
-    font-size: 16px;
+  .theme-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 900;
     color: var(--body);
-    line-height: 1.65;
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+  .theme-divider {
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent 60%);
+    margin-bottom: 0;
+  }
+
+  /* ── VERSE CARD ── */
+  .verse-card {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--divider);
+  }
+  .verse-card:last-child { border-bottom: none; }
+  .verse-ref {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--body);
+    margin-bottom: 8px;
+  }
+  .verse-text {
+    font-size: 16px;
+    color: var(--gray-dark);
+    line-height: 1.8;
+    font-style: italic;
+    border-left: 2px solid var(--gold);
+    padding-left: 14px;
+  }
+
+  /* ── KEYWORD HIGHLIGHT ── */
+  mark {
+    background: none;
+    color: var(--gold);
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  /* ── SECTION DIVIDER ── */
+  .section-break {
+    height: 32px;
+    background: var(--cream);
+    border-top: 1px solid var(--divider);
+    border-bottom: 1px solid var(--divider);
+    margin: 32px 0 0;
   }
 
   /* ── FOOTER ── */
@@ -220,26 +208,19 @@
     color: var(--gray-mid);
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    margin-top: 20px;
+    margin-top: 32px;
   }
-  footer a {
-    color: var(--gold);
-    text-decoration: none;
-  }
+  footer a { color: var(--gold); text-decoration: none; }
 
   /* ── DESKTOP ── */
   @media (min-width: 700px) {
     header { padding: 52px 48px 48px; }
     header h1 { font-size: 52px; }
-    .header-theme { font-size: 20px; }
-    .key-verse-text { font-size: 15px; }
-    .topic-box { margin: 32px 48px; padding: 28px; }
-    .topic-name { font-size: 22px; }
-    .section-label { padding: 0 48px 10px; }
-    .passages { padding: 0 48px; max-width: 780px; }
-    .passage-text { font-size: 15px; }
-    .questions { padding: 0 48px 32px; max-width: 780px; }
-    .q-text { font-size: 15px; }
+    .theme-nav { padding: 20px 48px; flex-direction: row; align-items: center; gap: 16px; }
+    .theme-nav-label { margin-bottom: 0; white-space: nowrap; }
+    .theme-section { padding: 40px 48px 0; max-width: 780px; }
+    .section-break { margin: 40px 0 0; }
+    .verse-text { font-size: 15px; }
   }
 </style>
 </head>
@@ -251,95 +232,245 @@
   <div class="eyebrow">Week 1 of 27 &nbsp;·&nbsp; Men in God's Word</div>
   <h1>Matthew</h1>
   <div class="header-theme">Jesus is King</div>
-  <div class="key-verse-block">
-    <div class="key-verse-ref">Matthew 28:18</div>
-    <div class="key-verse-text">"All authority in heaven and on earth has been given to me."</div>
-  </div>
+  <p class="header-intro">After studying the whole book of Matthew together, four major themes emerged from the text. Below are the key passages we walked through under each theme — in sequential order as they appear in Matthew.</p>
 </header>
 
-<!-- MEN'S TOPIC -->
-<div class="topic-box">
-  <div class="topic-label">Men's Topic</div>
-  <div class="topic-name">Know the Character and Nature of God</div>
-  <div class="topic-quote">"What comes into our minds when we think about God is the most important thing about us."</div>
-  <div class="topic-author">— A.W. Tozer</div>
+<!-- THEME NAV -->
+<div class="theme-nav">
+  <div class="theme-nav-label">Jump to Theme</div>
+  <div class="theme-nav-links">
+    <a class="theme-nav-link" href="#fruit">Bearing Fruit</a>
+    <a class="theme-nav-link" href="#godsword">Hearing &amp; Obeying God's Word</a>
+    <a class="theme-nav-link" href="#rewards">Rewards &amp; Treasure in Heaven</a>
+    <a class="theme-nav-link" href="#meekness">Meekness &amp; Humility</a>
+    <a class="theme-nav-link" href="#fame">Bonus Theme — The News About Jesus</a>
+  </div>
 </div>
 
-<!-- SCRIPTURE -->
-<div class="section-label">Scripture for This Week</div>
-<div class="passages">
-
-  <div class="passage">
-    <div class="passage-ref">Matthew 3:16–17</div>
-    <div class="passage-text">(16) And when Jesus was baptized, immediately he went up from the water, and behold, the heavens were opened to him, and he saw the Spirit of God descending like a dove and coming to rest on him; (17) and behold, a voice from heaven said, "This is my beloved Son, with whom I am well pleased."</div>
+<!-- THEME 1: BEARING FRUIT -->
+<div class="theme-section" id="fruit">
+  <div class="theme-header">
+    <div class="theme-number">Theme 1</div>
+    <div class="theme-title">Bearing Fruit</div>
+    <div class="theme-divider"></div>
   </div>
 
-  <div class="passage">
-    <div class="passage-ref">Matthew 5:3–12</div>
-    <div class="passage-text">(3) Blessed are the poor in spirit, for theirs is the kingdom of heaven. (4) Blessed are those who mourn, for they shall be comforted. (5) Blessed are the meek, for they shall inherit the earth. (6) Blessed are those who hunger and thirst for righteousness, for they shall be satisfied. (7) Blessed are the merciful, for they shall receive mercy. (8) Blessed are the pure in heart, for they shall see God. (9) Blessed are the peacemakers, for they shall be called sons of God. (10) Blessed are those who are persecuted for righteousness' sake, for theirs is the kingdom of heaven. (11) Blessed are you when others revile you and persecute you and utter all kinds of evil against you falsely on my account. (12) Rejoice and be glad, for your reward is great in heaven, for so they persecuted the prophets who were before you.</div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 3:8</div>
+    <div class="verse-text">"<mark>Produce</mark> <mark>fruit</mark> in keeping with repentance."</div>
   </div>
-
-  <div class="passage">
-    <div class="passage-ref">Matthew 6:5, 16–18</div>
-    <div class="passage-text">(5) And when you pray, you must not be like the hypocrites. For they love to stand and pray in the synagogues and at the street corners, that they may be seen by others. Truly, I say to you, they have received their reward. But when you pray, go into your room and shut the door and pray to your Father who is in secret. And your Father who sees in secret will reward you. (16) And when you fast, do not look gloomy like the hypocrites, for they disfigure their faces that their fasting may be seen by others. Truly, I say to you, they have received their reward. (17) But when you fast, anoint your head and wash your face, (18) that your fasting may not be seen by others but by your Father who is in secret. And your Father who sees in secret will reward you.</div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 3:10</div>
+    <div class="verse-text">"The ax is already at the root of the trees, and every tree that does not <mark>produce</mark> good <mark>fruit</mark> will be cut down and thrown into the fire."</div>
   </div>
-
-  <div class="passage">
-    <div class="passage-ref">Matthew 6:25–34</div>
-    <div class="passage-text">(25) Therefore I tell you, do not be anxious about your life, what you will eat or what you will drink, nor about your body, what you will put on. Is not life more than food, and the body more than clothing? (26) Look at the birds of the air: they neither sow nor reap nor gather into barns, and yet your heavenly Father feeds them. Are you not of more value than they? (27) And which of you by being anxious can add a single hour to his span of life? (28) And why are you anxious about clothing? Consider the lilies of the field, how they grow: they neither toil nor spin, (29) yet I tell you, even Solomon in all his glory was not arrayed like one of these. (30) But if God so clothes the grass of the field, which today is alive and tomorrow is thrown into the oven, will he not much more clothe you, O you of little faith? (31) Therefore do not be anxious, saying, 'What shall we eat?' or 'What shall we drink?' or 'What shall we wear?' (32) For the Gentiles seek after all these things, and your heavenly Father knows that you need them all. (33) But seek first the kingdom of God and his righteousness, and all these things will be added to you. (34) Therefore do not be anxious about tomorrow, for tomorrow will be anxious for itself. Sufficient for the day is its own trouble.</div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 7:16–20</div>
+    <div class="verse-text">"By their <mark>fruit</mark> you will recognize them. Do grapes come from thornbushes, or figs from thistles? Likewise, every good tree bears good <mark>fruit</mark>, but a bad tree bears bad <mark>fruit</mark>. A good tree cannot bear bad <mark>fruit</mark>, and a bad tree cannot bear good <mark>fruit</mark>. Every tree that does not bear good <mark>fruit</mark> is cut down and thrown into the fire. Thus, by their <mark>fruit</mark> you will recognize them."</div>
   </div>
-
-  <div class="passage">
-    <div class="passage-ref">Matthew 7:7–12</div>
-    <div class="passage-text">(7) Ask, and it will be given to you; seek, and you will find; knock, and it will be opened to you. (8) For everyone who asks receives, and the one who seeks finds, and to the one who knocks it will be opened. (9) Or which one of you, if his son asks him for bread, will give him a stone? (10) Or if he asks for a fish, will give him a serpent? (11) If you then, who are evil, know how to give good gifts to your children, how much more will your Father who is in heaven give good things to those who ask him! (12) So whatever you wish that others would do to you, do also to them, for this is the Law and the Prophets.</div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 12:33–35</div>
+    <div class="verse-text">"Make a tree good and its <mark>fruit</mark> will be good, or make a tree bad and its <mark>fruit</mark> will be bad, for a tree is recognized by its <mark>fruit</mark>. You brood of vipers, how can you who are evil say anything good? For out of the abundance of the heart the mouth speaks. The good man brings good things out of the good stored up in him, and the evil man brings evil things out of the evil stored up in him."</div>
   </div>
-
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 13:8</div>
+    <div class="verse-text">"Still other seed fell on good soil, where it <mark>produced</mark> a <mark>crop</mark> — a hundred, sixty or thirty times what was sown."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 13:23</div>
+    <div class="verse-text">"But the seed falling on good soil refers to someone who hears the word and understands it. This is the one who <mark>produces</mark> a <mark>crop</mark>, yielding a hundred, sixty or thirty times what was sown."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 21:28–32</div>
+    <div class="verse-text">"What do you think? There was a man who had two sons. He went to the first and said, 'Son, go and work today in the vineyard.' 'I will not,' he answered, but later he <mark>changed his mind and went</mark>. Then the father went to the other son and said the same thing. He answered, 'I will, sir,' but he did not go. Which of the two did what his father wanted? The first. Truly I tell you, the tax collectors and the prostitutes are entering the kingdom of God ahead of you. For John came to you to show you the way of righteousness, and you did not believe him, but the <mark>tax collectors and the prostitutes did</mark>. And even after you saw this, you did not repent and believe him."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 21:43</div>
+    <div class="verse-text">"Therefore I tell you that the kingdom of God will be taken away from you and given to a people who will <mark>produce</mark> its <mark>fruit</mark>."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 25:31–40</div>
+    <div class="verse-text">"When the Son of Man comes in his glory, and all the angels with him, he will sit on his glorious throne. All the nations will be gathered before him, and he will separate the people one from another as a shepherd separates the sheep from the goats. He will put the sheep on his right and the goats on his left. Then the King will say to those on his right, 'Come, you who are blessed by my Father; take your inheritance, the kingdom prepared for you since the creation of the world. For I was hungry and you <mark>gave me</mark> something to eat, I was thirsty and you <mark>gave me</mark> something to drink, I was a stranger and you <mark>invited me</mark> in, I needed clothes and you <mark>clothed me</mark>, I was sick and you <mark>looked after me</mark>, I was in prison and you came to <mark>visit me</mark>.' Then the righteous will answer him, 'Lord, when did we see you hungry and feed you, or thirsty and give you something to drink? When did we see you a stranger and invite you in, or needing clothes and clothe you? When did we see you sick or in prison and go to visit you?' The King will reply, 'Truly I tell you, whatever you <mark>did for one of the least of these brothers and sisters of mine, you did for me</mark>.'"</div>
+  </div>
 </div>
 
-<!-- DISCUSSION QUESTIONS -->
-<div class="section-label">Discussion Questions</div>
-<div class="questions">
+<div class="section-break"></div>
 
-  <div class="question-item">
-    <div class="q-number">1</div>
-    <div class="q-content">
-      <div class="q-label">God's Character</div>
-      <div class="q-text">What does this passage reveal about who God is — his character, his nature, and his love toward you personally?</div>
-    </div>
+<!-- THEME 2: GOD'S WORD -->
+<div class="theme-section" id="godsword">
+  <div class="theme-header">
+    <div class="theme-number">Theme 2</div>
+    <div class="theme-title">Hearing &amp; Obeying God's Word</div>
+    <div class="theme-divider"></div>
   </div>
 
-  <div class="question-item">
-    <div class="q-number">2</div>
-    <div class="q-content">
-      <div class="q-label">Loving God</div>
-      <div class="q-text">What does this passage stir in you toward God — worship, trust, obedience, surrender, faith?</div>
-    </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 4:4</div>
+    <div class="verse-text">"It is written: 'Man shall not live on bread alone, but on every <mark>word</mark> that comes from the mouth of God.'"</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 7:21</div>
+    <div class="verse-text">"Not everyone who says to me, 'Lord, Lord,' <mark>will</mark> enter the kingdom of heaven, but only the one who <mark>does</mark> the <mark>will</mark> of my Father who is in heaven."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 7:24–27</div>
+    <div class="verse-text">"Therefore everyone who <mark>hears</mark> these words of mine and puts them into <mark>practice</mark> is like a wise man who built his house on the rock. The rain came down, the streams rose, and the winds blew and beat against that house; yet it did not fall, because it had its foundation on the rock. But everyone who <mark>hears</mark> these words of mine and does not put them into <mark>practice</mark> is like a foolish man who built his house on sand. The rain came down, the streams rose, and the winds blew and beat against that house, and it fell with a great crash."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 12:50</div>
+    <div class="verse-text">"For whoever <mark>does</mark> the <mark>will</mark> of my Father in heaven is my brother and sister and mother."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 13:16–17</div>
+    <div class="verse-text">"But blessed are your eyes because they see, and your ears because they <mark>hear</mark>. For truly I tell you, many prophets and righteous people longed to see what you see but did not see it, and to <mark>hear</mark> what you <mark>hear</mark> but did not <mark>hear</mark> it."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 13:23</div>
+    <div class="verse-text">"But the seed falling on good soil refers to someone who <mark>hears</mark> the <mark>word</mark> and understands it. This is the one who produces a crop, yielding a hundred, sixty or thirty times what was sown."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 14:28–29</div>
+    <div class="verse-text">"Lord, if it's you," Peter replied, "<mark>command</mark> me to come to you on the water." "Come," he said. Then Peter got down out of the boat, walked on the water and came toward Jesus.</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 17:5</div>
+    <div class="verse-text">"This is my Son, whom I love; with him I am well pleased. <mark>Listen to him!</mark>"</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 28:18–20</div>
+    <div class="verse-text">"All authority in heaven and on earth has been given to me. Therefore go and make disciples of all nations, baptizing them in the name of the Father and of the Son and of the Holy Spirit, and teaching them to <mark>obey</mark> everything I have <mark>commanded</mark> you. And surely I am with you always, to the very end of the age."</div>
+  </div>
+</div>
+
+<div class="section-break"></div>
+
+<!-- THEME 3: REWARDS -->
+<div class="theme-section" id="rewards">
+  <div class="theme-header">
+    <div class="theme-number">Theme 3</div>
+    <div class="theme-title">Rewards &amp; Seek Treasure in Heaven</div>
+    <div class="theme-divider"></div>
   </div>
 
-  <div class="question-item">
-    <div class="q-number">3</div>
-    <div class="q-content">
-      <div class="q-label">Loving People</div>
-      <div class="q-text">How does this passage challenge or equip you to love the people closest to you — your wife, kids, parents, friends, employer, or employees?</div>
-    </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 5:11–12</div>
+    <div class="verse-text">"Blessed are you when people insult you, persecute you and falsely say all kinds of evil against you because of me. Rejoice and be glad, because great is your <mark>reward</mark> in <mark>heaven</mark>, for in the same way they persecuted the prophets who were before you."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 6:1</div>
+    <div class="verse-text">"Be careful not to practice your righteousness in front of others to be seen by them. If you do, you will have no <mark>reward</mark> from your Father in <mark>heaven</mark>."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 6:2–4</div>
+    <div class="verse-text">"So when you give to the needy, do not announce it with trumpets, as the hypocrites do in the synagogues and on the streets, to be honored by others. Truly I tell you, they have received their <mark>reward</mark> in full. But when you give to the needy, do not let your left hand know what your right hand is doing, so that your giving may be in <mark>secret</mark>. Then your Father, who sees what is done in <mark>secret</mark>, will <mark>reward</mark> you."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 6:5–6</div>
+    <div class="verse-text">"And when you pray, do not be like the hypocrites, for they love to pray standing in the synagogues and on the street corners to be seen by others. Truly I tell you, they have received their <mark>reward</mark> in full. But when you pray, go into your room, close the door and pray to your Father, who is unseen. Then your Father, who sees what is done in <mark>secret</mark>, will <mark>reward</mark> you."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 6:16–18</div>
+    <div class="verse-text">"When you fast, do not look somber as the hypocrites do, for they disfigure their faces to show others they are fasting. Truly I tell you, they have received their <mark>reward</mark> in full. But when you fast, put oil on your head and wash your face, so that it will not be obvious to others that you are fasting, but only to your Father, who is unseen; and your Father, who sees what is done in <mark>secret</mark>, will <mark>reward</mark> you."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 6:19–21</div>
+    <div class="verse-text">"Do not <mark>store up</mark> for yourselves <mark>treasures</mark> on earth, where moths and vermin destroy, and where thieves break in and steal. But <mark>store up</mark> for yourselves <mark>treasures</mark> in <mark>heaven</mark>, where moths and vermin do not destroy, and where thieves do not break in and steal. For where your <mark>treasure</mark> is, there your heart will be also."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 10:41–42</div>
+    <div class="verse-text">"Whoever welcomes a prophet as a prophet will receive a prophet's <mark>reward</mark>, and whoever welcomes a righteous person as a righteous person will receive a righteous person's <mark>reward</mark>. And if anyone gives even a cup of cold water to one of these little ones who is my disciple, truly I tell you, that person will certainly not lose their <mark>reward</mark>."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 16:27</div>
+    <div class="verse-text">"For the Son of Man is going to come in his Father's glory with his angels, and then he will <mark>reward</mark> each person according to what they have done."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 19:21</div>
+    <div class="verse-text">"If you want to be perfect, go, sell your possessions and give to the poor, and you will have <mark>treasure</mark> in <mark>heaven</mark>. Then come, follow me."</div>
+  </div>
+</div>
+
+<div class="section-break"></div>
+
+<!-- THEME 4: MEEKNESS -->
+<div class="theme-section" id="meekness">
+  <div class="theme-header">
+    <div class="theme-number">Theme 4</div>
+    <div class="theme-title">Meekness &amp; Humility</div>
+    <div class="theme-divider"></div>
   </div>
 
-  <div class="question-item">
-    <div class="q-number">4</div>
-    <div class="q-content">
-      <div class="q-label">Conviction &amp; Growth</div>
-      <div class="q-text">Where does this passage convict you about where you currently are — and where is God calling you to go / grow further? What is one thing you can do this week as a result of this?</div>
-    </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 5:5</div>
+    <div class="verse-text">"Blessed are the <mark>meek</mark>, for they will inherit the earth."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 8:4</div>
+    <div class="verse-text">"<mark>See that you don't tell anyone.</mark> But go, show yourself to the priest and offer the gift Moses commanded, as a testimony to them."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 9:30</div>
+    <div class="verse-text">"See that <mark>no one knows</mark> about this."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 11:29</div>
+    <div class="verse-text">"Take my yoke upon you and learn from me, for I am <mark>gentle</mark> and <mark>humble</mark> in heart, and you will find rest for your souls."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 12:16</div>
+    <div class="verse-text">He warned them <mark>not to tell others</mark> about him.</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 16:20</div>
+    <div class="verse-text">Then he ordered his disciples <mark>not to tell anyone</mark> that he was the Messiah.</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 17:9</div>
+    <div class="verse-text">"<mark>Don't tell anyone</mark> what you have seen, until the Son of Man has been raised from the dead."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 18:4</div>
+    <div class="verse-text">"Therefore, whoever <mark>humbles</mark> himself like this child is the greatest in the kingdom of heaven."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 20:26–28</div>
+    <div class="verse-text">"Whoever wants to become great among you must be your <mark>servant</mark>, and whoever wants to be first must be your slave — just as the Son of Man did not come to be served, but to <mark>serve</mark>, and to give his life as a ransom for many."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 21:5</div>
+    <div class="verse-text">"Say to Daughter Zion, 'See, your king comes to you, <mark>gentle</mark> and riding on a donkey, and on a colt, the foal of a donkey.'"</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 23:11–12</div>
+    <div class="verse-text">"The greatest among you will be your <mark>servant</mark>. For those who exalt themselves will be <mark>humbled</mark>, and those who <mark>humble</mark> themselves will be exalted."</div>
+  </div>
+</div>
+
+<div class="section-break"></div>
+
+<!-- THEME 5: JESUS FAME -->
+<div class="theme-section" id="fame">
+  <div class="theme-header">
+    <div class="theme-number">Bonus Theme</div>
+    <div class="theme-title">The News About Jesus</div>
+    <div class="theme-divider"></div>
   </div>
 
-  <div class="question-item">
-    <div class="q-number">5</div>
-    <div class="q-content">
-      <div class="q-label">The Great Commission</div>
-      <div class="q-text">Who in your life can you share this with, in words or in actions, to encourage them toward a relationship with Jesus?</div>
-    </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 4:24–25</div>
+    <div class="verse-text">"<mark>News</mark> about him <mark>spread</mark> all over Syria, and people brought to him all who were ill with various diseases, those suffering severe pain, the demon-possessed, those having seizures, and the paralyzed; and he healed them. Large <mark>crowds</mark> from Galilee, the Decapolis, Jerusalem, Judea and the region across the Jordan <mark>followed</mark> him."</div>
   </div>
-
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 9:26</div>
+    <div class="verse-text"><mark>News</mark> of this <mark>spread</mark> through all that region.</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 9:31</div>
+    <div class="verse-text">But they went out and <mark>spread</mark> the <mark>news</mark> about him all over that region.</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Matthew 14:1</div>
+    <div class="verse-text">At that time Herod the tetrarch <mark>heard</mark> the <mark>report</mark> about Jesus.</div>
+  </div>
 </div>
 
 <footer>
