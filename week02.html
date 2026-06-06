@@ -1,1 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Week 2 — Mark | Men in God's Word</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --dark:      #2B2B2B;
+    --gold:      #C9A84C;
+    --cream:     #F9F6F0;
+    --white:     #FFFFFF;
+    --gray-mid:  #888888;
+    --gray-dark: #555555;
+    --body:      #1A1A1A;
+    --divider:   #D9D4CC;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--cream);
+    color: var(--body);
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-weight: 300;
+    line-height: 1.7;
+  }
 
+  /* ── HEADER ── */
+  header {
+    background: var(--dark);
+    padding: 36px 20px 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(-45deg, transparent, transparent 60px, rgba(255,255,255,0.012) 60px, rgba(255,255,255,0.012) 61px);
+    pointer-events: none;
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), transparent 70%);
+  }
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #AAAAAA;
+    text-decoration: none;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  .back-link:hover { color: var(--gold); }
+  .eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #AAAAAA;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+  }
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: 900;
+    color: white;
+    line-height: 1.1;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+  }
+  .header-theme {
+    font-size: 18px;
+    color: var(--gold);
+    font-style: italic;
+    margin-bottom: 18px;
+    position: relative;
+    z-index: 1;
+  }
+  .header-intro {
+    font-size: 15px;
+    color: #AAAAAA;
+    line-height: 1.65;
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+  }
+
+  /* ── THEME NAV ── */
+  .theme-nav {
+    background: var(--white);
+    border-bottom: 1px solid var(--divider);
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .theme-nav-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gray-mid);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .theme-nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .theme-nav-link {
+    font-size: 13px;
+    color: var(--dark);
+    text-decoration: none;
+    background: var(--cream);
+    border: 1px solid var(--divider);
+    border-left: 3px solid var(--gold);
+    padding: 6px 12px;
+    line-height: 1.3;
+    transition: background 0.15s;
+  }
+  .theme-nav-link:hover { background: rgba(201,168,76,0.1); }
+
+  /* ── THEME SECTION ── */
+  .theme-section { padding: 32px 20px 0; }
+  .theme-header { margin-bottom: 24px; }
+  .theme-number {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .theme-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--body);
+    line-height: 1.15;
+    margin-bottom: 10px;
+  }
+  .theme-divider {
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent 60%);
+  }
+
+  /* ── VERSE CARD ── */
+  .verse-card {
+    padding: 18px 0;
+    border-bottom: 1px solid var(--divider);
+  }
+  .verse-card:last-child { border-bottom: none; }
+  .verse-ref {
+    font-family: 'Playfair Display', serif;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--body);
+    margin-bottom: 8px;
+  }
+  .verse-text {
+    font-size: 16px;
+    color: var(--gray-dark);
+    line-height: 1.8;
+    font-style: italic;
+    border-left: 2px solid var(--gold);
+    padding-left: 14px;
+  }
+
+  /* ── KEYWORD HIGHLIGHT ── */
+  mark {
+    background: none;
+    color: var(--gold);
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  /* ── SECTION BREAK ── */
+  .section-break {
+    height: 32px;
+    background: var(--cream);
+    border-top: 1px solid var(--divider);
+    border-bottom: 1px solid var(--divider);
+    margin: 32px 0 0;
+  }
+
+  /* ── CLOSING CHALLENGE ── */
+  .closing {
+    background: var(--dark);
+    padding: 32px 20px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 32px;
+  }
+  .closing::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(-45deg, transparent, transparent 40px, rgba(255,255,255,0.015) 40px, rgba(255,255,255,0.015) 41px);
+    pointer-events: none;
+  }
+  .closing::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), transparent 70%);
+  }
+  .closing-label {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #AAAAAA;
+    font-weight: 600;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+  }
+  .closing-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+    line-height: 1.4;
+    position: relative;
+    z-index: 1;
+    max-width: 600px;
+  }
+  .closing-text em {
+    color: var(--gold);
+    font-style: normal;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    border-top: 1px solid var(--divider);
+    text-align: center;
+    padding: 20px;
+    font-size: 11px;
+    color: var(--gray-mid);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-top: 0;
+  }
+  footer a { color: var(--gold); text-decoration: none; }
+
+  /* ── DESKTOP ── */
+  @media (min-width: 700px) {
+    header { padding: 52px 48px 48px; }
+    header h1 { font-size: 52px; }
+    .theme-nav { padding: 20px 48px; flex-direction: row; align-items: center; gap: 16px; }
+    .theme-nav-label { margin-bottom: 0; white-space: nowrap; }
+    .theme-section { padding: 40px 48px 0; max-width: 780px; }
+    .section-break { margin: 40px 0 0; }
+    .closing { padding: 40px 48px; }
+    .verse-text { font-size: 15px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <a class="back-link" href="index.html">← All 27 Weeks</a>
+  <div class="eyebrow">Week 2 of 27 &nbsp;·&nbsp; Men in God's Word</div>
+  <h1>Mark</h1>
+  <div class="header-theme">Jesus is Servant</div>
+  <p class="header-intro">Unlike the other Gospels, Mark focuses on Jesus' actions — what he did more than what he said. Mark presents Jesus as the Servant King, moving with urgency and authority. Four themes emerged from our study of the whole book.</p>
+</header>
+
+<!-- THEME NAV -->
+<div class="theme-nav">
+  <div class="theme-nav-label">Jump to Theme</div>
+  <div class="theme-nav-links">
+    <a class="theme-nav-link" href="#authority">Jesus' Authority Revealed</a>
+    <a class="theme-nav-link" href="#identity">Jesus' Identity</a>
+    <a class="theme-nav-link" href="#suffers">Jesus Suffers</a>
+    <a class="theme-nav-link" href="#victory">Jesus' Victory</a>
+    <a class="theme-nav-link" href="#sower">Bonus Theme — Parable of the Sower</a>
+  </div>
+</div>
+
+<!-- THEME 1: AUTHORITY -->
+<div class="theme-section" id="authority">
+  <div class="theme-header">
+    <div class="theme-number">Theme 1</div>
+    <div class="theme-title">Jesus' Authority Revealed</div>
+    <div class="theme-divider"></div>
+  </div>
+
+  <div class="verse-card">
+    <div class="verse-ref">Mark 1:22</div>
+    <div class="verse-text">"The people were amazed at his teaching, because he taught them as one who had <mark>authority</mark>, not as the teachers of the law."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Mark 2:5–7</div>
+    <div class="verse-text">"When Jesus saw their faith, he said to the paralyzed man, 'Son, your sins are <mark>forgiven</mark>.' Now some teachers of the law were sitting there, thinking to themselves, 'Why does this fellow talk like that? He's blaspheming! Who can <mark>forgive sins</mark> but God alone?'"</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Mark 4:39–41</div>
+    <div class="verse-text">"He got up, <mark>rebuked the wind</mark> and said to the waves, '<mark>Quiet! Be still!</mark>' Then the wind died down and it was completely calm. He said to his disciples, 'Why are you so afraid? Do you still have no faith?' They were terrified and asked each other, 'Who is this? Even the wind and the waves <mark>obey him</mark>!'"</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Mark 5:41–42</div>
+    <div class="verse-text">"He took her by the hand and said to her, '<mark>Talitha koum!</mark>' (which means 'Little girl, I say to you, get up!'). Immediately the girl stood up and began to walk around (she was twelve years old). At this they were completely astonished."</div>
+  </div>
+</div>
+
+<div class="section-break"></div>
+
+<!-- THEME 2: IDENTITY -->
+<div class="theme-section" id="identity">
+  <div class="theme-header">
+    <div class="theme-number">Theme 2</div>
+    <div class="theme-title">Jesus' Identity</div>
+    <div class="theme-divider"></div>
+  </div>
+
+  <div class="verse-card">
+    <div class="verse-ref">Mark 8:27–30</div>
+    <div class="verse-text">"Jesus and his disciples went on to the villages around Caesarea Philippi. On the way he asked them, 'Who do people say I am?' They replied, 'Some say John the Baptist; others say Elijah; and still others, one of the prophets.' 'But what about you?' he asked. '<mark>Who do you say I am?</mark>' Peter answered, '<mark>You are the Messiah.</mark>' Jesus warned them not to tell anyone about him."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Mark 9:7–8</div>
+    <div class="verse-text">"Then a cloud appeared and covered them, and a voice came from the cloud: '<mark>This is my Son, whom I love. Listen to him!</mark>' Suddenly, when they looked around, they no longer saw anyone with them except Jesus."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Mark 10:44–45</div>
+    <div class="verse-text">"Whoever wants to be first must be <mark>slave of all</mark>. For even the Son of Man did not come to be served, but <mark>to serve</mark>, and to give his life as a <mark>ransom for many</mark>."</div>
+  </div>
+</div>
+
+<div class="section-break"></div>
+
+<!-- THEME 3: SUFFERS -->
+<div class="theme-section" id="suffers">
+  <div class="theme-header">
+    <div class="theme-number">Theme 3</div>
+    <div class="theme-title">Jesus Suffers</div>
+    <div class="theme-divider"></div>
+  </div>
+
+  <div class="verse-card">
+    <div class="verse-ref">Mark 14:36</div>
+    <div class="verse-text">"'<mark>Abba, Father</mark>,' he said, 'everything is possible for you. Take this cup from me. Yet <mark>not what I will, but what you will</mark>.'"</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Mark 15:22–24</div>
+    <div class="verse-text">"They brought Jesus to the place called <mark>Golgotha</mark> (which means 'the place of the skull'). Then they offered him wine mixed with myrrh, but he did not take it. And they <mark>crucified him</mark>. Dividing up his clothes, they cast lots to see what each would get."</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Mark 15:34</div>
+    <div class="verse-text">"And at three in the afternoon Jesus cried out in a loud voice, '<mark>Eloi, Eloi, lema sabachthani?</mark>' (which means '<mark>My God, my God, why have you forsaken me?</mark>')"</div>
+  </div>
+</div>
+
+<div class="section-break"></div>
+
+<!-- THEME 4: VICTORY -->
+<div class="theme-section" id="victory">
+  <div class="theme-header">
+    <div class="theme-number">Theme 4</div>
+    <div class="theme-title">Jesus' Victory</div>
+    <div class="theme-divider"></div>
+  </div>
+
+  <div class="verse-card">
+    <div class="verse-ref">Mark 16:6–7</div>
+    <div class="verse-text">"'Don't be alarmed,' he said. 'You are looking for Jesus the Nazarene, who was crucified. <mark>He has risen!</mark> He is not here. See the place where they laid him. But go, tell his disciples and Peter, "<mark>He is going ahead of you into Galilee. There you will see him</mark>," just as he told you.'"</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Mark 16:15</div>
+    <div class="verse-text">"He said to them, '<mark>Go into all the world and preach the gospel to all creation.</mark>'"</div>
+  </div>
+</div>
+
+<div class="section-break"></div>
+
+<!-- BONUS THEME: PARABLE OF THE SOWER -->
+<div class="theme-section" id="sower">
+  <div class="theme-header">
+    <div class="theme-number">Bonus Theme</div>
+    <div class="theme-title">Parable of the Sower</div>
+    <div class="theme-divider"></div>
+  </div>
+
+  <div class="verse-card">
+    <div class="verse-ref">Mark 4:3–9</div>
+    <div class="verse-text">"'Listen! A farmer went out to sow his seed. As he was scattering the seed, some fell along the path, and the birds came and ate it up. Some fell on rocky places, where it did not have much soil. It sprang up quickly, because the soil was shallow. But when the sun came up, the plants were scorched, and they withered because they had no root. Other seed fell among thorns, which grew up and choked the plants, so that they did not bear grain. Still other seed fell on <mark>good soil</mark>. It came up, grew and produced a <mark>crop</mark>, some multiplying thirty, some sixty, some a hundred times.' Then Jesus said, 'Whoever has ears to hear, let them hear.'"</div>
+  </div>
+  <div class="verse-card">
+    <div class="verse-ref">Mark 4:14–20</div>
+    <div class="verse-text">"The farmer sows the <mark>word</mark>. Some people are like seed along the path, where the word is sown. As soon as they hear it, Satan comes and takes away the word that was sown in them. Others, like seed sown on rocky places, hear the word and at once receive it with joy. But since they have no root, they last only a short time. When trouble or persecution comes because of the word, they quickly fall away. Still others, like seed sown among thorns, hear the word; but the worries of this life, the deceitfulness of wealth and the desires for other things come in and choke the word, making it unfruitful. Others, like seed sown on <mark>good soil</mark>, hear the word, accept it, and <mark>produce a crop</mark> — some thirty, some sixty, some a hundred times what was sown."</div>
+  </div>
+</div>
+
+<!-- CLOSING CHALLENGE -->
+<div class="closing">
+  <div class="closing-label">The Challenge</div>
+  <div class="closing-text">Let our <em>fruit</em>, our <em>actions</em> cause people to want to know why.</div>
+</div>
+
+<footer>
+  <a href="index.html">← Back to All 27 Weeks</a> &nbsp;·&nbsp; Mark &nbsp;·&nbsp; Week 2 of 27 &nbsp;·&nbsp; ESV
+</footer>
+
+</body>
+</html>
